@@ -129,6 +129,24 @@ This project uses Playwright in the Scrapy settings. Playwright is a Node.js lib
 
 Scrapy-User-Agents is a middleware for Scrapy that provides a user-agent rotation based on the settings in settings.py, spider, request. A default User-Agent file is included in this repository, which contains about 2200 user agent strings. You can supply your own User-Agent file by setting RANDOM_UA_FILE.
 
+## GitHub Actions Workflow
+
+This repository uses a GitHub Actions workflow to run a web scraper every 2 hours. Here's a brief explanation of what each part does:
+
+- `name: Run scraper`: This is the name of the workflow.
+- `on: schedule: - cron: '0 */2 * * *'`: This sets the workflow to run on a schedule, specifically every 2 hours.
+- `on: workflow_dispatch:`: This allows you to manually trigger the workflow from GitHub's UI.
+- `jobs: build:`: This starts the definition of a job called `build`.
+- `runs-on: ubuntu-latest`: This sets the job to run on the latest version of Ubuntu.
+- `steps:`: This begins the list of steps that the job will run.
+- `- uses: actions/checkout@v2`: This step checks out your repository so the workflow can access it.
+- `- name: Set up Python`: This step sets up Python using the `actions/setup-python@v2` action.
+- `- name: Install dependencies`: This step installs the dependencies listed in your `requirements.txt` file.
+- `- name: Install Playwright browsers`: This step installs the browsers required by Playwright.
+- `- name: Run scraper`: This step runs the `sastodeal_spider` scraper.
+- `- name: Setup Git`: This step sets up Git with the email and username of "GitHub Action".
+- `- name: Push changes`: This step commits any changes made during the run of the workflow and pushes them to the repository.
+
 ## Contributing
 
 Contributions to this project are welcome. Please open an issue to discuss your proposed changes before making a pull request.
