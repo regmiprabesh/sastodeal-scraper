@@ -1,7 +1,9 @@
 name: Run scraper
+# on:
+#   schedule:
+#     - cron: '*/1 * * * *'  # Runs every 1 minutes
 on:
-  schedule:
-    - cron: '*/1 * * * *'  # Runs every 1 minutes
+  workflow_dispatch:
 jobs:
   build:
     runs-on: ubuntu-latest
