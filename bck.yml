@@ -1,7 +1,7 @@
 name: Run scraper
 on:
   schedule:
-    - cron: '0 */5 * * *'  # Runs every 5 hours
+    - cron: '0 */2 * * *'  # Runs every 2 hours
 on:
   workflow_dispatch:
 jobs:
