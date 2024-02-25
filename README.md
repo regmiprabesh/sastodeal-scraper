@@ -9,7 +9,7 @@ It uses the Playwright package to handle JavaScript loaded websites and the Scra
   1. Clone this repository to your local machine:
  
  ```bash
-git clone https://github.com/regmiprabesh/sastodeal-scraper
+git clone https://github.com/regmiprabesh/sastodeal-scraper.git
  ```
 
 2. Open your terminal and navigate to the project directory:
