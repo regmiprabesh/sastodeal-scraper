@@ -131,10 +131,10 @@ Scrapy-User-Agents is a middleware for Scrapy that provides a user-agent rotatio
 
 ## GitHub Actions Workflow
 
-This repository uses a GitHub Actions workflow to run a web scraper every 2 hours. Here's a brief explanation of what each part does:
+This repository uses a GitHub Actions workflow to run a web scraper every once a week. Here's a brief explanation of what each part does:
 
 - `name: Run scraper`: This is the name of the workflow.
-- `on: schedule: - cron: '0 */2 * * *'`: This sets the workflow to run on a schedule, specifically every 2 hours.
+- `on: schedule: - cron: '0 0 * * 0'`: This sets the workflow to run on a schedule, specifically at 00:00 on sunday.
 - `on: workflow_dispatch:`: This allows you to manually trigger the workflow from GitHub's UI.
 - `jobs: build:`: This starts the definition of a job called `build`.
 - `runs-on: ubuntu-latest`: This sets the job to run on the latest version of Ubuntu.
