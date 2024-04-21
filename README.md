@@ -15,7 +15,7 @@ git clone https://github.com/regmiprabesh/sastodeal-scraper.git
 2. Open your terminal and navigate to the project directory:
 
 ```bash
-cd sastodealscraping
+cd sastodeal-scraper
 ```
 3. Create a viertual environment for the project using venv:
 
